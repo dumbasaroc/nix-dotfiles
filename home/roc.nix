@@ -15,6 +15,7 @@ in {
     ];
 
     programs.zsh = {
+      enable = true;
       initContent = ''
         PATH="''$PATH:''$HOME/.nixos/bin"
         eval "''$(starship init zsh)"
