@@ -14,6 +14,20 @@ in {
       inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
 
+    # === FILES == #
+
+    xdg.configFile = {
+      "kitty/kitty.conf" = {
+        enable = true;
+        text = ''
+          font_family      FiraCode Nerd Font
+          font_size        12.0
+        '';
+      };
+    };
+
+    # == ENDFILES == #
+
     programs.zsh = {
       enable = true;
       initContent = ''
