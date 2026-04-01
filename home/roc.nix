@@ -15,7 +15,10 @@ in {
     ];
 
     programs.zsh = {
-      initContent = ''eval "''$(starship init zsh)"'';
+      initContent = ''
+        PATH="''$PATH:''$HOME/.nixos/bin"
+        eval "''$(starship init zsh)"
+      '';
     };
 
     programs = {
