@@ -16,6 +16,14 @@ in {
 
     # === FILES == #
 
+    ## ==== BACKGROUND IMAGES ==== ##
+
+    home.file.".bgimg" = {
+      enable = true;
+      recursive = true;
+      source = ./roc/.bgimg;
+    };
+
     xdg.configFile = {
       "kitty/kitty.conf" = {
         enable = true;
