@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+
+print_version() {
+    echo "NORS - NixOs Rebuild Switch - Version 0.0.1"
+}
+
+show_usage() {
+    echo "Usage: $0 [-h|-v] [-m MESSAGE] [-p PROFILENAME]"
+}
+
+show_help() {
+    print_version
+    echo "Script by Roc"
+    echo ""
+    show_usage
+}
+
+## Define flags
+## -v => version
+## -h => help
+## -m => commit message
+## -p => commit profile/branch
+
+while getopts ":vhm:p:" VARNAME
+do
+    if [[ "$VARNAME" == "?" ]]; then
+        printf "Flag '%s' is not a valid flag for this script.\n" "$OPTARG"
+        show_help
+        exit 1
+    fi
+
+    case "$VARNAME" in
+        "v")
+            print_version
+            exit 0;;
+        "h")
+            show_help
+            exit 0;;
+        "m")
+            COMMIT_MESSAGE="$OPTARG";;
+        "p")
+            PROFILE_NAME="--profile-name '$OPTARG'";;
+    esac
+done
+
+cd /home/roc/.nixos/ && git add .
+sudo nixos-rebuild switch ${PROFILE_NAME:+--profile-name "$PROFILE_NAME"}
+NORS_EXIT_CODE=$?
+
+if [ $NORS_EXIT_CODE -ne 0 ]; then
+    echo "============================"
+    printf " Exited with error code %03d\n" $NORS_EXIT_CODE
+    echo "============================"
+    echo ""
+    exit 1
+fi
+
+# If successful, git commit with either provided message or timestamp
+if [ -z "$COMMIT_MESSAGE" ]; then
+    COMMIT_MESSAGE="$(date)"
+fi
+
+cd /home/roc/.nixos/ && git commit -m "$COMMIT_MESSAGE"
+
