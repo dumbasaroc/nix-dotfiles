@@ -15,6 +15,9 @@
 
     # Bar
     waybar
+
+    # Wallpaper
+    swaybg
   ];
 }
 
