@@ -10,7 +10,8 @@
         
         # Nix
         jnoortheen.nix-ide
-        arrterian.nix-env-selector
+        # arrterian.nix-env-selector
+	oops418.nix-env-picker
 
         # ClangD
         llvm-vs-code-extensions.vscode-clangd
