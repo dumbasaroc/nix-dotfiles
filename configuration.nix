@@ -57,6 +57,9 @@
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
 
+  # Enable bluetooth support
+  hardware.bluetooth.enable = true;
+
   # Activate Tailscale
   services.tailscale.enable = true;
 
