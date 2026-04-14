@@ -12,6 +12,8 @@ in {
       kitty
       tree
       inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+      papirus-icon-theme
+      bibata-cursors
     ];
 
     # === FILES == #
