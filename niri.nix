@@ -1,6 +1,6 @@
 # Niri Configuration
 
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 {
   programs.niri = {
     enable = true;
@@ -15,6 +15,7 @@
 
     # Bar
     waybar
+    inputs.quickshell.packages."x86_64-linux".default
 
     # Wallpaper
     swaybg

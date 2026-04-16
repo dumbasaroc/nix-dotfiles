@@ -25,6 +25,12 @@
 	  version = "1.10.0";
 	  sha256 = "sha256-W84m9b3Dzq2LjUpa/0hzSWbVokaxI4IDEaCySWDF9Uk=";
         }
+        {
+          name = "qt-qml";
+          publisher = "TheQtCompany";
+	  version = "1.13.0";
+	  sha256 = "sha256-WPzierXLQM+HdVb0XAx80f4Fdd34Vf7WbFzFapr5VHE=";
+        }
       ];
     })
   ];

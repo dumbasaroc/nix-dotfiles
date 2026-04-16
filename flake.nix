@@ -18,7 +18,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { self, nixpkgs, zen-browser, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, zen-browser, home-manager, quickshell, ... }@inputs: {
     # NOTE: 'nixos' is the default hostname
     nixosConfigurations.roc-nixos = nixpkgs.lib.nixosSystem {
       modules = [
