@@ -31,6 +31,13 @@
 	  version = "1.13.0";
 	  sha256 = "sha256-WPzierXLQM+HdVb0XAx80f4Fdd34Vf7WbFzFapr5VHE=";
         }
+        {
+          name = "qt-core";
+          publisher = "TheQtCompany";
+	  version = "1.12.0";
+	  sha256 = "sha256-X8YzpmZbMWAfLv3YjBr/jDqEMakzUBNQViiJLXah+3I=";
+        }
+
       ];
     })
   ];
