@@ -15,7 +15,7 @@
 
     # Bar
     inputs.quickshell.packages."x86_64-linux".default
-    kdePackages.qtlocation
+    kdePackages.kirigami
 
     # Wallpaper
     swaybg
