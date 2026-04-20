@@ -14,11 +14,13 @@
     fuzzel
 
     # Bar
-    waybar
     inputs.quickshell.packages."x86_64-linux".default
 
     # Wallpaper
     swaybg
+
+    # XWayland
+    xwayland-satellite
   ];
 }
 
