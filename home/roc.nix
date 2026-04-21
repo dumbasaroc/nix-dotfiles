@@ -7,6 +7,10 @@ in {
     shell = pkgs.zsh;
   };
 
+  imports = [
+
+  ];
+
   home-manager.users.roc = {
     home.packages = with pkgs; [
       kitty
