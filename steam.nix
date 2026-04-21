@@ -3,7 +3,8 @@
 { config, lib, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    steam
-    mesa
+    # steam
+    # mesa
+    steam-devices-udev-rules
   ];
 }
