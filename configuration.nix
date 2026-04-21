@@ -13,6 +13,7 @@
       ./kde6.nix
       ./niri.nix
       ./system-packages.nix
+      ./steam.nix
       ./vscode.nix
     ];
 
