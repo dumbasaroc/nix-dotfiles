@@ -8,6 +8,7 @@ in {
   };
 
   imports = [
+    ./roc/cli.nix
     ./roc/design.nix
   ];
 
