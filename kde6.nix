@@ -25,6 +25,9 @@
     wayland-utils
     wl-clipboard
     vlc
+
+    # Kvantum for extra theming
+    qt6Packages.qtstyleplugin-kvantum
   ];
 
 }
