@@ -9,6 +9,9 @@
 
   services.iio-niri.enable = true;
 
+  # Thunar File Browser Thumbnailer
+  services.tumbler.enable = true;
+
   environment.systemPackages = with pkgs; [
     thunar
     fuzzel

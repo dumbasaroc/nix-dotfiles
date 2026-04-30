@@ -7,9 +7,9 @@ in {
     shell = pkgs.zsh;
   };
 
-  # imports = [
-  #   ./roc/steam.nix
-  # ];
+  imports = [
+    ./roc/design.nix
+  ];
 
   home-manager.users.roc = {
     home.packages = with pkgs; [
