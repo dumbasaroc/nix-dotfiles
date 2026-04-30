@@ -28,8 +28,8 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
         }
-        ./home/roc.nix        
-        ./home/tester.nix
+        ./home/roc.nix
+        # ./home/tester.nix
         {
           _module.args = { inherit inputs; };
         }
