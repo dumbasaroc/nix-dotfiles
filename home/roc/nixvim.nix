@@ -26,6 +26,7 @@
       # LSP Config
       lspconfig = {
         enable = true;
+        autoLoad = true;
       };
     };
   };
