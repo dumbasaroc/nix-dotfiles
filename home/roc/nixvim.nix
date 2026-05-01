@@ -10,6 +10,16 @@
   programs.nixvim = {
     enable = true;
 
+    # Scripts that trigger on specific events,
+    # namely startup
+    autoCmd = [
+      {
+        command = "Telescope file_browser";
+        event = "VimEnter";
+        desc = "Start with Telescope file browser on Vim Startup";
+      }
+    ];
+
     # Language Servers
     lsp = {
       inlayHints.enable = true;
