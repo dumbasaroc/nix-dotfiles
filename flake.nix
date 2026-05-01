@@ -31,6 +31,7 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
         }
+        nixvim.nixosModules.nixvim
         ./home/roc.nix
         # ./home/tester.nix
         {

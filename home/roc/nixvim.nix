@@ -1,14 +1,9 @@
-{inputs, lib, pkgs, config, nixvim, ...}: {
+{inputs, lib, pkgs, config, ...}: {
   # imports = [
   #   nixvim.homeModules.nixvim
   # ];
 
-  # home-manager.users.roc = {
-  #   home.packages = with pkgs; [
-  #     penpot-desktop
-  #     inkscape
-  #     gimp
-  #   ];
-
-  # };
+  programs.nixvim = {
+    enable = true;
+  };
 }
