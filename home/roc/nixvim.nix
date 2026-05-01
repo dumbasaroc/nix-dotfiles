@@ -31,6 +31,11 @@
         autoLoad = true;
       };
 
+      cmp-nvim-lsp = {
+        enable = true;
+        autoLoad = true;
+      };
+
       # LSP Config
       lspconfig = {
         enable = true;
