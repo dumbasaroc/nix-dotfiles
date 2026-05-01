@@ -5,5 +5,13 @@
 
   programs.nixvim = {
     enable = true;
+
+    plugins = {
+      
+      # Lazy.VIM
+      lazy = {
+        enable = true;
+      };
+    };
   };
 }
