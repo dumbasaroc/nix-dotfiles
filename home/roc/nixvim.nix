@@ -36,6 +36,10 @@
             { name = "luasnip"; }
           ];
         };
+
+        settings.completion.autocomplete = [
+          "require('cmp.types').cmp.TriggerEvent.TextChanged"
+        ];
       };
 
       cmp-nvim-lsp = {
