@@ -25,6 +25,12 @@
     };
 
     plugins = {
+      # Code Completion
+      cmp = {
+        enable = true;
+        autoLoad = true;
+      };
+
       # LSP Config
       lspconfig = {
         enable = true;
