@@ -41,6 +41,11 @@
         enable = true;
         autoLoad = true;
       };
+
+      luasnip = {
+        enable = true;
+        autoLoad = true;
+      };
     };
   };
 }
