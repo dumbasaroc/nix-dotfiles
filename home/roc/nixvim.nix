@@ -29,6 +29,13 @@
       cmp = {
         enable = true;
         autoLoad = true;
+
+        settings = {
+          sources = [
+            { name = "nvim_lsp"; }
+            { name = "luasnip"; }
+          ];
+        };
       };
 
       cmp-nvim-lsp = {
