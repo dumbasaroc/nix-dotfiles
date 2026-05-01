@@ -36,7 +36,7 @@
         autoLoad = true;
 
         keymaps = {
-
+          
         };
       };
 
@@ -91,6 +91,10 @@
         enable = true;
         autoLoad = true;
 
+        keymaps = {
+          "<C-f>" = "file_browser";
+        };
+
         extensions = {
           file-browser.enable = true;
         };
@@ -98,6 +102,12 @@
 
       # Web Devicons - needed for Telescope, Barbar
       web-devicons = {
+        enable = true;
+        autoLoad = true;
+      };
+
+      # Which-Key - keymap popups
+      which-key = {
         enable = true;
         autoLoad = true;
       };
