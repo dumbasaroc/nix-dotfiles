@@ -3,6 +3,10 @@
   #   nixvim.homeModules.nixvim
   # ];
 
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "barbar.nvim"
+  ];
+  
   programs.nixvim = {
     enable = true;
 
@@ -25,6 +29,17 @@
     };
 
     plugins = {
+
+      # Barbar - Tabs
+      barbar = {
+        enable = true;
+        autoLoad = true;
+
+        keymaps = {
+
+        };
+      };
+
       # Code Completion
       cmp = {
         enable = true;
@@ -67,6 +82,18 @@
       };
 
       luasnip = {
+        enable = true;
+        autoLoad = true;
+      };
+
+      # Telescope - File Browser
+      telescope = {
+        enable = true;
+        autoLoad = true;
+      };
+
+      # Web Devicons - needed for Telescope, Barbar
+      web-devicons = {
         enable = true;
         autoLoad = true;
       };

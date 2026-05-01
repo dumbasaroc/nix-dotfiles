@@ -19,9 +19,13 @@
     };
     nixvim = {
       url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { self, nixpkgs, zen-browser, home-manager, quickshell, nixvim, ... }@inputs: {
+  outputs = { self, nixpkgs, zen-browser, home-manager, quickshell, nixvim, ... }@inputs:
+  {
+    nixpkgs.config.allowUnfree = true;
+
     # NOTE: 'nixos' is the default hostname
     nixosConfigurations.roc-nixos = nixpkgs.lib.nixosSystem {
       modules = [
