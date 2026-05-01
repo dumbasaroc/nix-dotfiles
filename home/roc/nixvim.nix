@@ -36,6 +36,11 @@
         autoLoad = true;
       };
 
+      cmp_luasnip = {
+        enable = true;
+        autoLoad = true;
+      };
+
       # LSP Config
       lspconfig = {
         enable = true;
