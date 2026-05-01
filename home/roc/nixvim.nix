@@ -8,6 +8,7 @@
 
     # Language Servers
     lsp = {
+      inlayHints.enable = true;
       servers = {
         clangd = {
           enable = true;
