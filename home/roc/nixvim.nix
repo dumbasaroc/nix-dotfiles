@@ -36,7 +36,21 @@
         autoLoad = true;
 
         keymaps = {
-          
+          close = {
+            key = "<C-f>ww";
+          };
+
+          next = {
+            key = "<C-f><Right>";
+          };
+
+          previous = {
+            key = "<C-f><Left>";
+          };
+
+          pin = {
+            key = "<C-f>wp";
+          };
         };
       };
 
@@ -92,7 +106,18 @@
         autoLoad = true;
 
         keymaps = {
-          "<C-f>" = "file_browser";
+          "<C-f>f" = {
+            action = "file_browser";
+            options = {
+              desc = "Open Telescope File Browser";
+            };
+          };
+          "<C-f>F" = {
+            action = "buffers";
+            options = {
+              desc = "Open Buffer (Tab) List";
+            };
+          };
         };
 
         extensions = {
