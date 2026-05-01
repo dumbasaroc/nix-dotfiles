@@ -90,6 +90,10 @@
       telescope = {
         enable = true;
         autoLoad = true;
+
+        extensions = {
+          file-browser.enable = true;
+        };
       };
 
       # Web Devicons - needed for Telescope, Barbar
