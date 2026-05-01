@@ -17,8 +17,11 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixvim = {
+      url = "github:nix-community/nixvim";
+    };
   };
-  outputs = { self, nixpkgs, zen-browser, home-manager, quickshell, ... }@inputs: {
+  outputs = { self, nixpkgs, zen-browser, home-manager, quickshell, nixvim, ... }@inputs: {
     # NOTE: 'nixos' is the default hostname
     nixosConfigurations.roc-nixos = nixpkgs.lib.nixosSystem {
       modules = [

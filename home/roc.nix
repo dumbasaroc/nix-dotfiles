@@ -1,5 +1,6 @@
 {inputs, lib, pkgs, config, ...}: let
   home-manager = inputs.home-manager;
+  nixvim = inputs.nixvim;
 in {
   users.users.roc = {
     isNormalUser = true;
@@ -10,6 +11,7 @@ in {
   imports = [
     ./roc/cli.nix
     ./roc/design.nix
+    ./roc/nixvim.nix
   ];
 
   home-manager.users.roc = {

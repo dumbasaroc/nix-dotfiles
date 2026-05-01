@@ -5,17 +5,15 @@
 { config, lib, pkgs, inputs, ... }:
 
 {
-  imports =
-    [
-      ./fonts.nix
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./kde6.nix
-      ./niri.nix
-      ./system-packages.nix
-      ./steam.nix
-      ./vscode.nix
-    ];
+  imports = [
+    ./fonts.nix
+    ./hardware-configuration.nix
+    ./kde6.nix
+    ./niri.nix
+    ./system-packages.nix
+    ./steam.nix
+    ./vscode.nix
+  ];
 
   # Allow unfree programs (namely VSCode)
   nixpkgs.config.allowUnfree = true;
@@ -107,7 +105,6 @@
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
-    neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     git
   ];
