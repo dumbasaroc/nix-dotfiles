@@ -7,9 +7,24 @@
     enable = true;
 
     plugins = {
+
+      # Language Servers
+      lsp = {
+        clangd = {
+          enable = true;
+        };
+
+        lua_ls = {
+          enable = true;
+        };
+
+        rust_analyzer = {
+          enable = true;
+        };
+      };
       
-      # Lazy.VIM
-      lazy = {
+      # LSP Config
+      lspconfig = {
         enable = true;
       };
     };
