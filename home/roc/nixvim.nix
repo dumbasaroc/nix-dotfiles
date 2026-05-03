@@ -10,11 +10,27 @@
   programs.nixvim = {
     enable = true;
 
+    # Rounded floating windows
+    diagnostic.settings = {
+      float.border = "rounded";
+    };
+
+    opts = {
+      # Disable mouse
+      mouse = "";
+    };
+
+    colorschemes = {
+      monokai-pro = {
+        enable = true;
+      };
+    };
+
     keymaps = [
 
       # === LSP KEYBINDS === #
       {
-        action = "<cmd>lua vim.lsp.buf.hover()<CR>";
+        action = ''<cmd>lua vim.lsp.buf.hover({border = "rounded"})<CR>'';
         key = "<C-d>f";
         options = {
           desc = "Show LSP hover information";
@@ -42,6 +58,14 @@
         key = "<C-d>D";
         options = {
           desc = "Go to item declaration";
+          silent = true;
+        };
+      }
+      {
+        action = ''<cmd>lua vim.diagnostic.open_float()<CR>'';
+        key = "<C-d>v";
+        options = {
+          desc = "Open Diagnostic for item under cursor";
           silent = true;
         };
       }
