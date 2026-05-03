@@ -10,6 +10,43 @@
   programs.nixvim = {
     enable = true;
 
+    keymaps = [
+
+      # === LSP KEYBINDS === #
+      {
+        action = "<cmd>lua vim.lsp.buf.hover()<CR>";
+        key = "<C-d>f";
+        options = {
+          desc = "Show LSP hover information";
+          silent = true;
+        };
+      }
+      {
+        action = "<cmd>lua vim.lsp.buf.rename()<CR>";
+        key = "<C-d>r";
+        options = {
+          desc = "Rename symbol under cursor";
+          silent = true;
+        };
+      }
+      {
+        action = "<cmd>lua vim.lsp.buf.definition()<CR>";
+        key = "<C-d>d";
+        options = {
+          desc = "Go to item definition";
+          silent = true;
+        };
+      }
+      {
+        action = "<cmd>lua vim.lsp.buf.declaration()<CR>";
+        key = "<C-d>D";
+        options = {
+          desc = "Go to item declaration";
+          silent = true;
+        };
+      }
+    ];
+
     # Language Servers
     lsp = {
       inlayHints.enable = true;
