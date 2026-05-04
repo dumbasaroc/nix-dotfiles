@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+VERSION="0.0.1"
+
 print_version() {
-    echo "NORS - NixOs Rebuild Switch - Version 0.0.1"
+    echo "NORS - NixOs Rebuild Switch - v${VERSION}"
 }
 
 show_usage() {

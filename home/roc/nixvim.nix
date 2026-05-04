@@ -150,6 +150,11 @@
         autoLoad = true;
       };
 
+      git-conflict = {
+        enable = true;
+        autoLoad = true;
+      };
+
       # LSP Config
       lspconfig = {
         enable = true;
