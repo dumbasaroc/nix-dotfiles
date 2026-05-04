@@ -45,6 +45,18 @@ do
     esac
 done
 
+##git pull
+##GIT_PULL_EXIT=$?
+
+##if [ $GIT_PULL_EXIT -ne 0 ]; then
+##    echo "===================================="
+##    echo " Error occurred in pulling from Git"
+##    echo "===================================="
+##    # git diff --name-only --relative | xargs nvim
+##    exit 1
+##fi
+
+
 cd /home/roc/.nixos/ && git add .
 sudo nixos-rebuild switch ${PROFILE_NAME:+--profile-name "$PROFILE_NAME"}
 NORS_EXIT_CODE=$?
@@ -63,4 +75,5 @@ if [ -z "$COMMIT_MESSAGE" ]; then
 fi
 
 cd /home/roc/.nixos/ && git commit -m "$COMMIT_MESSAGE"
+##git push
 
