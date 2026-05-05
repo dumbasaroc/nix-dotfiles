@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-VERSION="0.0.1"
+VERSION="0.0.2"
 
 print_version() {
     echo "NORS - NixOs Rebuild Switch - v${VERSION}"
@@ -45,7 +45,7 @@ do
     esac
 done
 
-git pull
+cd /home/roc/.nixos && git pull
 GIT_PULL_EXIT=$?
 
 if [ $GIT_PULL_EXIT -ne 0 ]; then

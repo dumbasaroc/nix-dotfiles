@@ -10,6 +10,8 @@
   programs.nixvim = {
     enable = true;
 
+    nixpkgs.config.allowUnfree = true;
+
     # Rounded floating windows
     diagnostic.settings = {
       float.border = "rounded";
@@ -150,11 +152,6 @@
       };
 
       cmp_luasnip = {
-        enable = true;
-        autoLoad = true;
-      };
-
-      git-conflict = {
         enable = true;
         autoLoad = true;
       };
