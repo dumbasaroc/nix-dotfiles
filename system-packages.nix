@@ -14,5 +14,9 @@
 
     direnv
     killall
+
+    # Control packages
+    brightnessctl
+    pavucontrol
   ];
 }
