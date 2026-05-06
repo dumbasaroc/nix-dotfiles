@@ -19,7 +19,7 @@
     };
     nixvim = {
       url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
   };
   outputs = { self, nixpkgs, zen-browser, home-manager, quickshell, nixvim, ... }@inputs:
