@@ -81,6 +81,9 @@
   hardware.sensor.iio.enable = true;
 
   
+  # Enable Solaar (Flake) for interacting with
+  # Logitech devices
+  services.solaar.enable = true;
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";

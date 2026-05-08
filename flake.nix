@@ -21,21 +21,27 @@
       url = "github:nix-community/nixvim";
       # inputs.nixpkgs.follows = "nixpkgs";
     };
+    solaar = {
+      url = "https://flakehub.com/f/Svenum/Solaar-Flake/*.tar.gz"; # For latest stable version
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-  outputs = { self, nixpkgs, zen-browser, home-manager, quickshell, nixvim, ... }@inputs:
+  outputs = { self, nixpkgs, zen-browser, home-manager, quickshell, nixvim, solaar, ... }@inputs:
   {
     nixpkgs.config.allowUnfree = true;
 
     # NOTE: 'nixos' is the default hostname
     nixosConfigurations.roc-nixos = nixpkgs.lib.nixosSystem {
       modules = [
+        nixvim.nixosModules.nixvim
+        solaar.nixosModules.default
+
         ./configuration.nix
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
         }
-        nixvim.nixosModules.nixvim
         ./home/roc.nix
         # ./home/tester.nix
         {
