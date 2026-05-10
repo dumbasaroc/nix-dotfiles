@@ -29,6 +29,8 @@ show_help() {
     show flags
 }
 
+DO_NOT_PUSH_PULL_GH=0
+
 ## Define flags
 ## -v => version
 ## -h => help
@@ -93,6 +95,6 @@ fi
 
 cd /home/roc/.nixos/ && git rm --cached hardware-configuration.nix
 cd /home/roc/.nixos/ && git commit -m "$COMMIT_MESSAGE"
-if [ $DO_NOT_PUSH_PULL_GH -ne 1]; then
+if [ $DO_NOT_PUSH_PULL_GH -ne 1 ]; then
     git push
 fi
