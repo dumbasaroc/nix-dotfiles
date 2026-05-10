@@ -23,7 +23,7 @@
     };
 
     colorschemes = {
-      catppuccin-powerline = {
+      monokai-pro = {
         enable = true;
       };
     };

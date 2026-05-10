@@ -58,7 +58,7 @@ in {
     programs = {
       starship = {
         enable = true;
-        presets = [ "jetpack" ];
+        presets = [ "catppuccin-powerline" ];
       };
     };
 
