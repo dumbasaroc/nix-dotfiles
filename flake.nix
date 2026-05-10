@@ -35,7 +35,10 @@
       modules = [
         nixvim.nixosModules.nixvim
         solaar.nixosModules.default
-
+        
+        {
+          networking.hostName = "roc-nixos"; # Define your hostname.
+        }
         ./configuration.nix
         home-manager.nixosModules.home-manager
         {
@@ -49,6 +52,28 @@
         }
       ];
     };
+    nixosConfigurations.roc-desktop-nixos = nixpkgs.lib.nixosSystem {
+      modules = [
+        nixvim.nixosModules.nixvim
+        solaar.nixosModules.default
+
+        {
+          networking.hostName = "roc-desktop-nixos"; # Define your hostname.
+        }
+        ./configuration.nix
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+        }
+        ./home/roc.nix
+        # ./home/tester.nix
+        {
+          _module.args = { inherit inputs; };
+        }
+      ];
+    };
+
   };
 }
 
