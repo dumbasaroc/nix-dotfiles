@@ -58,6 +58,11 @@ in {
     programs = {
       starship = {
         enable = true;
+        settings = {
+          cmd_duration = {
+            disabled = true;
+          };
+        };
         presets = [ "catppuccin-powerline" ];
       };
     };
