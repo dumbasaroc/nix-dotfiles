@@ -10,11 +10,23 @@ show_usage() {
     echo "Usage: $0 [-h|-v] [-m MESSAGE] [-p PROFILENAME]"
 }
 
+show_flags() {
+    echo "FLAGS"
+    echo "====="
+    echo "    -v            Display version info and exit"
+    echo "    -h            Display help menu and exit"
+    echo "    -m MESSAGE    Use MESSAGE as the git commit message, as opposed to the date/time"
+    echo "    -p PROFILE    Regenerate NixOS with the given profile string"
+    echo "    -n            No not push or pull to GitHub on this rebuild"
+}
+
 show_help() {
     print_version
     echo "Script by Roc"
     echo ""
     show_usage
+    echo ""
+    show flags
 }
 
 ## Define flags
@@ -22,8 +34,9 @@ show_help() {
 ## -h => help
 ## -m => commit message
 ## -p => commit profile/branch
+## -n => do not push/pull to github
 
-while getopts ":vhm:p:" VARNAME
+while getopts ":vhnm:p:" VARNAME
 do
     if [[ "$VARNAME" == "?" ]]; then
         printf "Flag '%s' is not a valid flag for this script.\n" "$OPTARG"
@@ -42,22 +55,26 @@ do
             COMMIT_MESSAGE="$OPTARG";;
         "p")
             PROFILE_NAME="--profile-name '$OPTARG'";;
+        "n")
+            DO_NOT_PUSH_PULL_GH=1;;
     esac
 done
 
-cd /home/roc/.nixos && git pull
-GIT_PULL_EXIT=$?
+if [ $DO_NOT_PUSH_PULL_GH -ne 1 ]; then
+    cd /home/roc/.nixos && git pull
+    GIT_PULL_EXIT=$?
 
-if [ $GIT_PULL_EXIT -ne 0 ]; then
-    echo "===================================="
-    echo " Error occurred in pulling from Git"
-    echo "===================================="
-    # git diff --name-only --relative | xargs nvim
-    exit 1
+    if [ $GIT_PULL_EXIT -ne 0 ]; then
+        echo "===================================="
+        echo " Error occurred in pulling from Git"
+        echo "===================================="
+        # git diff --name-only --relative | xargs nvim
+        exit 1
+    fi
 fi
 
 
-cd /home/roc/.nixos/ && git add .
+cd /home/roc/.nixos/ && git add . && git add -f hardware-configuration.nix
 sudo nixos-rebuild switch ${PROFILE_NAME:+--profile-name "$PROFILE_NAME"}
 NORS_EXIT_CODE=$?
 
@@ -74,6 +91,8 @@ if [ -z "$COMMIT_MESSAGE" ]; then
     COMMIT_MESSAGE="$(date)"
 fi
 
+cd /home/roc/.nixos/ && git rm --cached hardware-configuration.nix
 cd /home/roc/.nixos/ && git commit -m "$COMMIT_MESSAGE"
-git push
-
+if [ $DO_NOT_PUSH_PULL_GH -ne 1]; then
+    git push
+fi

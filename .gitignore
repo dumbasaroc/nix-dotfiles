@@ -3,3 +3,6 @@
 
 # test files
 .test/
+
+# Hardware Scan - we don't need that populating to github
+hardware-configuration.nix
