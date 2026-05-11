@@ -6,6 +6,9 @@
 
     # Themeing, Cursors, Icons
     workspace = {
+
+      # Look and Feel (Global Theme)
+      lookAndFeel = "org.kde.breezetwilight.desktop";
       
       # Cursor
       cursor = {
@@ -15,6 +18,10 @@
 
       # Icon Theme
       iconTheme = "Papirus";
+
+      # Wallpaper
+      wallpaper = ./bgimg/niri_bg.jpg;
+      wallpaperFillMode = "stretch";
     };
     
     # Panel Configuration #
