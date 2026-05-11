@@ -26,7 +26,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { self, nixpkgs, zen-browser, home-manager, quickshell, nixvim, solaar, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixvim, solaar, ... }@inputs:
   {
     nixpkgs.config.allowUnfree = true;
 
