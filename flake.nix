@@ -5,12 +5,21 @@
     # i.e. nixos-24.11
     # Use `nix flake update` to update the flake to the latest revision of the chosen release channel.
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    zen-browser = {
-      url = "github:youwen5/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+
+    ## HOME MANAGER AND PLUGINS
     home-manager = {
       url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
+    
+    ## PROGRAMS
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     quickshell = {
@@ -26,7 +35,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { self, nixpkgs, home-manager, nixvim, solaar, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, plasma-manager, nixvim, solaar, ... }@inputs:
   {
     nixpkgs.config.allowUnfree = true;
 
@@ -44,6 +53,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
+          home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
         }
         ./home/roc.nix
         # ./home/tester.nix
@@ -52,6 +62,7 @@
         }
       ];
     };
+
     nixosConfigurations.roc-desktop-nixos = nixpkgs.lib.nixosSystem {
       modules = [
         nixvim.nixosModules.nixvim
@@ -65,6 +76,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
+          home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
         }
         ./home/roc.nix
         # ./home/tester.nix

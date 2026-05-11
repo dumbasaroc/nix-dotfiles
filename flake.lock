@@ -46,11 +46,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1778009629,
-        "narHash": "sha256-nUoQtf4Zq7DRYJrfv904hjrxjAlWVP6a1pNNFKx3FCg=",
+        "lastModified": 1778444552,
+        "narHash": "sha256-f18pIiR9q/p1vHY93gmAum7aHhQOG49oGvAB9+lptRo=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "00ed86e58bb6979a7921859fd1615d19382eac5c",
+        "rev": "dcebe66f958673729896eec2de4abfd86ef22d21",
         "type": "github"
       },
       "original": {
@@ -111,6 +111,29 @@
         "type": "github"
       }
     },
+    "plasma-manager": {
+      "inputs": {
+        "home-manager": [
+          "home-manager"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1775856943,
+        "narHash": "sha256-b7Mp7P+q2Md5AGt4rjHfMcBykzMumFTen10ST++AuTU=",
+        "owner": "nix-community",
+        "repo": "plasma-manager",
+        "rev": "a524a6160e6df89f7673ba293cf7d78b559eb1a5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "plasma-manager",
+        "type": "github"
+      }
+    },
     "quickshell": {
       "inputs": {
         "nixpkgs": [
@@ -118,11 +141,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777871389,
-        "narHash": "sha256-gU+VGpwGJ2vvg0mtYqVvj5u+2LteuHlpokH6JSAtueY=",
+        "lastModified": 1778222427,
+        "narHash": "sha256-6GFiP611nEJvtm+m03sMyfaVIJ9QOCi//hS+PPKyyPA=",
         "ref": "refs/heads/master",
-        "rev": "59e9c47b0eb48a9e4bcf9631fa062ee939bd2e83",
-        "revCount": 815,
+        "rev": "d1760ed1f31c02a95b37a9bf4084129c829ebe7f",
+        "revCount": 817,
         "type": "git",
         "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
       },
@@ -136,6 +159,7 @@
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
+        "plasma-manager": "plasma-manager",
         "quickshell": "quickshell",
         "solaar": "solaar",
         "zen-browser": "zen-browser"
@@ -217,11 +241,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777612697,
-        "narHash": "sha256-h+tXBNMDrsKbD1UnYw0IeSIT4RalHtIJ1GLOviib7/8=",
+        "lastModified": 1778303188,
+        "narHash": "sha256-zXFSvK80qpI91B7DU9QSExAtafSrz6vzormh2kUi6kQ=",
         "owner": "youwen5",
         "repo": "zen-browser-flake",
-        "rev": "f9f70d14f9a57c7962c5cfe589461c1391044448",
+        "rev": "9346c84657a9cab472bc4ee5a2d65d42a72d5346",
         "type": "github"
       },
       "original": {

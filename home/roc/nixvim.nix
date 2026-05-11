@@ -1,7 +1,4 @@
 {inputs, lib, pkgs, config, ...}: {
-  # imports = [
-  #   nixvim.homeModules.nixvim
-  # ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "barbar.nvim"

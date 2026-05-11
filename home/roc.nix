@@ -12,6 +12,7 @@ in {
     ./roc/cli.nix
     ./roc/design.nix
     ./roc/nixvim.nix
+    ./roc/kde6-settings-desktop.nix
   ];
 
   home-manager.users.roc = {
