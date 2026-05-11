@@ -20,7 +20,7 @@
       iconTheme = "Papirus";
 
       # Wallpaper
-      wallpaper = ./bgimg/niri_bg.jpg;
+      wallpaper = ./.bgimg/niri_bg.jpg;
       wallpaperFillMode = "stretch";
     };
     
