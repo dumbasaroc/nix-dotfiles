@@ -47,8 +47,11 @@
             name = "org.kde.plasma.icontasks";
             config = {
               launchers = [
-                "${pkgs.firefox}/share/applications/firefox.desktop"
                 "applications:zen.desktop"
+                "applications:librewolf.desktop"
+                "applications:org.kde.dolphin.desktop"
+                "applications:kitty.desktop"
+                "applications:org.keepassxc.KeePassXC.desktop"
               ];
             };
           }
