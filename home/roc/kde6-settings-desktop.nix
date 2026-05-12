@@ -55,6 +55,13 @@
               ];
             };
           }
+
+          # Separator (spacer)
+          "org.kde.plasma.marginsseparator"
+
+          # Tray and Clock
+          "org.kde.plasma.systemtray"
+          "org.kde.plasma.digitalclock"
         ];
       }
     ];
