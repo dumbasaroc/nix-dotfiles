@@ -36,6 +36,22 @@
         location = "bottom";
         opacity = "translucent";
         screen = "all";
+
+        widgets = [
+          
+          # Kickoff (Start Menu)
+          "org.kde.plasma.kickoff"
+
+          # Icons Only Taskbar (With applications on there)
+          {
+            name = "org.kde.plasma.icontasks";
+            config = {
+              launchers = [
+                "zen.desktop"
+              ];
+            };
+          }
+        ];
       }
     ];
   };
