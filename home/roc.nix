@@ -40,8 +40,10 @@ in {
       "kitty/kitty.conf" = {
         enable = true;
         text = ''
-          font_family      FiraCode Nerd Font
-          font_size        12.0
+          font_family           FiraCode Nerd Font
+          font_size             12.0
+
+          shell_integration     enabled
         '';
       };
     };
