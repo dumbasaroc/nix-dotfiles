@@ -11,8 +11,9 @@ in {
   imports = [
     ./roc/cli.nix
     ./roc/design.nix
-    ./roc/nixvim.nix
     ./roc/kde6-settings-desktop.nix
+    ./roc/nixvim.nix
+    ./roc/thunderbird.nix
   ];
 
   home-manager.users.roc = {
