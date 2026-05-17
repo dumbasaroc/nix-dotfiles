@@ -1,7 +1,9 @@
 { config, lib, pkgs, inputs, ... }:
 
 {
-  hardware.opengl.extraPackages = with pkgs; [
+  hardware.graphics.enable = true;
+  hardware.graphics.enable32Bit = true;
+  hardware.graphics.extraPackages = with pkgs; [
     mesa.opencl
   ];
 }

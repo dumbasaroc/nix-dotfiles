@@ -76,7 +76,8 @@ if [ $DO_NOT_PUSH_PULL_GH -ne 1 ]; then
 fi
 
 
-cd /home/roc/.nixos/ && git add . && git add -f hardware-configuration.nix
+cd /home/roc/.nixos/ && git add .
+# && git add -f hardware-configuration.nix
 sudo nixos-rebuild switch ${PROFILE_NAME:+--profile-name "$PROFILE_NAME"}
 NORS_EXIT_CODE=$?
 
@@ -93,7 +94,7 @@ if [ -z "$COMMIT_MESSAGE" ]; then
     COMMIT_MESSAGE="$(date)"
 fi
 
-cd /home/roc/.nixos/ && git rm --cached hardware-configuration.nix
+# cd /home/roc/.nixos/ && git rm --cached hardware-configuration.nix
 cd /home/roc/.nixos/ && git commit -m "$COMMIT_MESSAGE"
 if [ $DO_NOT_PUSH_PULL_GH -ne 1 ]; then
     git push
