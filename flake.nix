@@ -73,7 +73,8 @@
           networking.hostName = "roc-desktop-nixos"; # Define your hostname.
         }
         ./configuration.nix
-        ./hardware-configuration.nix
+        ./desktop-configuration.nix
+        ./desktop-hardware-configuration.nix
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
