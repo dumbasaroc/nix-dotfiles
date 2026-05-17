@@ -1,6 +1,10 @@
 { config, lib, pkgs, inputs, ... }:
 
 {
+  imports = [
+    ./desktop/davinci-resolve.nix
+  ];
+
   environment.variables = {
     RUSTICL_ENABLE = "radeonsi";
   };
