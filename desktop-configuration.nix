@@ -21,5 +21,8 @@
     clinfo
     fastfetch
     blender
+    android-tools
   ];
+
+  users.users.roc.extraGroups = [ "adbusers" ];
 }
