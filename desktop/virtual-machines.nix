@@ -9,5 +9,5 @@
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
 
-  users.users.roc.extraGroups = [ "libvirtd" ];
+  users.users.roc.extraGroups = [ "libvirtd" "qemu" "kvm" ];
 }
