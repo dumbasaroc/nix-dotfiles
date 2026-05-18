@@ -3,6 +3,7 @@
 {
   imports = [
     ./desktop/davinci-resolve.nix
+    ./desktop/virtual-machines.nix
   ];
 
   environment.variables = {
