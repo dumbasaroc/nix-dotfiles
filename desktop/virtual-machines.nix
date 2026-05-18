@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     dnsmasq
+    spice-gtk
   ];
 
   virtualisation.libvirtd.enable = true;
