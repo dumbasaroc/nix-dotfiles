@@ -26,6 +26,7 @@ in {
 
       gh
       nix-search-tv
+      fzf
     ];
 
     # === FILES == #
