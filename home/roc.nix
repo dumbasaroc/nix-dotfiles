@@ -25,6 +25,7 @@ in {
       bibata-cursors
 
       gh
+      nix-search-tv
     ];
 
     # === FILES == #
