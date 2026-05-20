@@ -108,6 +108,7 @@
   environment.systemPackages = with pkgs; [
     wget
     git
+    ntfs3g
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
