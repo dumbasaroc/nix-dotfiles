@@ -31,6 +31,14 @@ in {
 
     # === FILES == #
 
+    ## ==== SCRIPTS ==== ##
+
+    home.file.".scripts" = {
+      enable = true;
+      recursive = true;
+      source = ./roc/.scripts;
+    };
+
     ## ==== BACKGROUND IMAGES ==== ##
 
     home.file.".bgimg" = {
@@ -58,6 +66,9 @@ in {
       initContent = ''
         PATH="''$PATH:''$HOME/.nixos/bin"
         eval "''$(starship init zsh)"
+
+        PATH="''$PATH:''$HOME/.scripts"
+        alias mkenter="source mkenter"
       '';
     };
 
