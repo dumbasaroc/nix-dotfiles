@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-cd "~/.nixos" && nvim .
+PREV_PWD="$(pwd)"
+cd ~/.nixos && nvim .
+cd $PREV_PWD
