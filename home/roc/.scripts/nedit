@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
 PREV_PWD="$(pwd)"
-cd ~/.nixos && nvim .
+
+if [ -z "$EDITOR" ]; then
+  SELECTED_EDITOR=nvim
+else
+  SELECTED_EDITOR=$EDITOR
+fi
+
+cd ~/.nixos && $SELECTED_EDITOR .
 cd $PREV_PWD
