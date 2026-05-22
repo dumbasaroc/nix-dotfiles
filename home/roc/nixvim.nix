@@ -90,6 +90,10 @@
         rust_analyzer = {
           enable = true;
         };
+
+        vtsls = {
+          enable = true;
+        };
       };
     };
 
