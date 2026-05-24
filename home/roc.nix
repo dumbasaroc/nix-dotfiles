@@ -27,6 +27,7 @@ in {
       gh
       nix-search-tv
       fzf
+      nwg-icon-picker
     ];
 
     # === FILES == #
