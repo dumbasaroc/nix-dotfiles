@@ -17,8 +17,7 @@
     fuzzel
 
     # Bar
-    inputs.quickshell.packages."x86_64-linux".default
-    kdePackages.kirigami
+    inputs.roc-ags-shell.packages."x86_64-linux".default
 
     # Wallpaper
     swaybg
