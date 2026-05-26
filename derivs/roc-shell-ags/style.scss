@@ -1,5 +1,12 @@
 // https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
 
-.popup_menu contents {
-  background-color: #cccccc;
+$bar-transparent-frame-color: #cccccc22;
+
+
+// BASIC ELEMENT PROPERTIES
+
+.elementFrame {
+  background-color: $bar-transparent-frame-color;
+  padding: 0 10px;
+  border-radius: 500px;
 }

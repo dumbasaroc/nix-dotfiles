@@ -4,13 +4,15 @@ import { Astal, Gtk, Gdk } from "ags/gtk4"
 import { createPoll } from "ags/time"
 import Tray from "gi://AstalTray"
 import { ControlCenter } from "./ControlCenter"
+import { ClockWidget } from "./Widgets/Clock"
+import { SystemTray } from "./SystemTray"
 
 export default function TopBar(gdkmonitor: Gdk.Monitor) {
   const time = createPoll("", 1000, "date")
   const { TOP, LEFT, RIGHT } = Astal.WindowAnchor
 
-  const tray = Tray.get_default();
-  const items = createBinding(tray, "items");
+  // const tray = Tray.get_default();
+  // const items = createBinding(tray, "items");
 
 
           // <For each={items}>
@@ -31,14 +33,15 @@ export default function TopBar(gdkmonitor: Gdk.Monitor) {
       application={app}
     >
       <centerbox cssName="centerbox">
-        <box $type="center" />
-        <menubutton $type="end" hexpand halign={Gtk.Align.CENTER}>
-          <label label={time} />
-          <popover>
-            <Gtk.Calendar />
-          </popover>
-        </menubutton>
-        <box cssClasses={[ "widgetContainer" ]} $type="end">
+        <box $type="center">
+          {ClockWidget()}
+        </box>
+        <box
+          cssClasses={[ "widgetContainer" ]}
+          spacing={10}
+          $type="end"
+        >
+          {SystemTray()}
           {ControlCenter()}
         </box>
       </centerbox>
