@@ -34,6 +34,11 @@
       url = "https://flakehub.com/f/Svenum/Solaar-Flake/*.tar.gz"; # For latest stable version
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    ## CUSTOM MADE DERIVATIONS
+    roc-ags-shell = {
+      url = "path:derivs/roc-shell-ags";
+    };
   };
   outputs = { self, nixpkgs, home-manager, plasma-manager, nixvim, solaar, ... }@inputs:
   {
