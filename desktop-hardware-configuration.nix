@@ -30,6 +30,12 @@
       fsType = "ext4";
     };
 
+  fileSystems."/home/roc/STEAM_LIBRARY_2" =
+    { device = "/dev/disk/by-uuid/6cb4ac2c-55ce-4b23-975f-c4bd3616de1a";
+      fsType = "btrfs";
+      options = [ "compress=zstd" ];
+    };
+
   fileSystems."/nix" =
     { device = "/dev/disk/by-uuid/8e3c1686-2166-47b7-bc1c-2b8bafc2a51d";
       fsType = "btrfs";

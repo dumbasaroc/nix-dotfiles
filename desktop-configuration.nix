@@ -8,6 +8,7 @@
 
   environment.variables = {
     RUSTICL_ENABLE = "radeonsi";
+    EDITOR = "nvim";
   };
   hardware.graphics.enable = true;
   hardware.graphics.enable32Bit = true;
