@@ -91,6 +91,10 @@
           enable = true;
         };
 
+        somesass_ls = {
+          enable = true;
+        };
+
         vtsls = {
           enable = true;
         };
