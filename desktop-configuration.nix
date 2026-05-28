@@ -21,8 +21,8 @@
   environment.systemPackages = with pkgs; [
     clinfo
     fastfetch
-    blender
     android-tools
+    parsec-bin
   ];
 
   users.users.roc.extraGroups = [ "adbusers" ];
