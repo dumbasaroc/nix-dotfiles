@@ -1,25 +1,12 @@
 import app from "ags/gtk4/app"
-import { createBinding } from "gnim"
-import { Astal, Gtk, Gdk } from "ags/gtk4"
-import { createPoll } from "ags/time"
-import Tray from "gi://AstalTray"
+import { Astal, Gdk } from "ags/gtk4"
 import { ControlCenter } from "./ControlCenter"
 import { ClockWidget } from "./Widgets/Clock"
 import { SystemTray } from "./SystemTray"
+import { WireplumberAudioControls } from "./Wireplumber"
 
 export default function TopBar(gdkmonitor: Gdk.Monitor) {
-  const time = createPoll("", 1000, "date")
   const { TOP, LEFT, RIGHT } = Astal.WindowAnchor
-
-  // const tray = Tray.get_default();
-  // const items = createBinding(tray, "items");
-
-
-          // <For each={items}>
-          //   {(trayItem) => (
-          //     <image gicon={createBinding(trayItem, "gicon")} />
-          //   )}
-          // </For>
 
   return (
     <window
@@ -41,6 +28,7 @@ export default function TopBar(gdkmonitor: Gdk.Monitor) {
           spacing={10}
           $type="end"
         >
+          {WireplumberAudioControls()}
           {SystemTray()}
           {ControlCenter()}
         </box>

@@ -18,6 +18,7 @@
 
     # Bar
     inputs.roc-ags-shell.packages."x86_64-linux".default
+    swaynotificationcenter
 
     # Wallpaper
     swaybg
