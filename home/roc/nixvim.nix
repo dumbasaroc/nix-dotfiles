@@ -1,5 +1,11 @@
 {inputs, lib, pkgs, config, ...}: {
 
+  home-manager.users.roc = {
+    home.packages = with pkgs; [
+      nixd
+    ];
+  };
+
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "barbar.nvim"
   ];
@@ -80,6 +86,10 @@
         };
 
         lua_ls = {
+          enable = true;
+        };
+
+        nixd = {
           enable = true;
         };
 
