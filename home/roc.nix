@@ -20,7 +20,9 @@ in {
     home.packages = with pkgs; [
       kitty
       tree
+      warehouse
       inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+      kdePackages.kdenlive
       papirus-icon-theme
       bibata-cursors
 
