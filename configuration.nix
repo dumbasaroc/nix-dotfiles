@@ -50,6 +50,11 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  # Set inotify settings
+  boot.kernel.sysctl = {
+    "fs.inotify.max_user_watches" = 524288;
+    "fs.inotify.max_user_instances" = 8192;
+  };
 
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
