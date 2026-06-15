@@ -30,6 +30,8 @@ in {
       nix-search-tv
       fzf
       nwg-icon-picker
+
+      apotris
     ];
 
     # === FILES == #
