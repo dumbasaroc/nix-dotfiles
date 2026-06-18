@@ -114,6 +114,8 @@
     wget
     git
     ntfs3g
+    wine
+    winetricks
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
