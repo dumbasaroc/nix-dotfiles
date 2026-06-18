@@ -114,7 +114,7 @@
     wget
     git
     ntfs3g
-    wine
+    wineWow64Packages.stable
     winetricks
   ];
 
