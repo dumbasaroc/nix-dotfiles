@@ -32,6 +32,7 @@ in {
       nwg-icon-picker
 
       apotris
+      trilium-next-desktop
     ];
 
     # === FILES == #
