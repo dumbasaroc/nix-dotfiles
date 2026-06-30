@@ -32,7 +32,6 @@ in {
       nwg-icon-picker
 
       apotris
-      wheelwizard
       trilium-next-desktop
     ];
 
