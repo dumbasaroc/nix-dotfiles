@@ -13,6 +13,7 @@ in {
     ./roc/design.nix
     ./roc/kde6-settings-desktop.nix
     ./roc/nixvim.nix
+    ./roc/security.nix
     ./roc/thunderbird.nix
   ];
 
