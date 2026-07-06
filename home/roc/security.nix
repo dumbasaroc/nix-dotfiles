@@ -4,9 +4,9 @@
   
   users.users.roc.extraGroups = [ "wireshark" ];
 
-  home-manager.users.roc = {
-    home.packages = with pkgs; [
-      wireshark
-    ];
+  programs.wireshark = {
+    enable = true;
+    dumpcap.enable = true;
+    usbmon.enable = true;
   };
 }
