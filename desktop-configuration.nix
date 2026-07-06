@@ -4,7 +4,7 @@
   imports = [
     ./desktop/davinci-resolve.nix
     ./desktop/virtual-machines.nix
-    ./desktop/waydroid.nix
+    # ./desktop/waydroid.nix
   ];
 
   environment.variables = {
