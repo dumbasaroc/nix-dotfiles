@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     dnsmasq
     spice-gtk
+    OVMF
   ];
 
   virtualisation.libvirtd.enable = true;
