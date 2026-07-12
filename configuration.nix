@@ -63,6 +63,12 @@
   # Enable bluetooth support
   hardware.bluetooth.enable = true;
 
+  # Enable Power Profiles Daemon
+  services.power-profiles-daemon.enable = true;
+
+  # Enable UPower Battery Monitor Daemon
+  services.upower.enable = true;
+
   # Activate Tailscale
   services.tailscale.enable = true;
 
