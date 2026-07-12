@@ -19,11 +19,17 @@
 
   nixpkgs.config.rocmSupport = true;
 
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+  };
+
+
   environment.systemPackages = with pkgs; [
     clinfo
     fastfetch
     android-tools
-    parsec-bin
+    distrobox
   ];
 
   users.users.roc.extraGroups = [ "adbusers" ];
