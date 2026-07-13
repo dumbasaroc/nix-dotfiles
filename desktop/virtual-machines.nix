@@ -12,7 +12,7 @@
 
   virtualisation.libvirtd = {
     enable = true;
-    qemu.package = pkgs.qemu_full;
+    qemu.package = pkgs.qemu;
   };
   virtualisation.spiceUSBRedirection.enable = true;
   programs.virt-manager.enable = true;
