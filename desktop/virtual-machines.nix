@@ -7,7 +7,13 @@
     OVMF
   ];
 
-  virtualisation.libvirtd.enable = true;
+  # Add QEMU firmware files to Virt-Manager
+  systemd.tmpfiles.rules = [ "L+ /var/lib/qemu/firmware - - - - ${pkgs.qemu}/share/qemu/firmware" ];
+
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu.package = pkgs.qemu_full;
+  };
   virtualisation.spiceUSBRedirection.enable = true;
   programs.virt-manager.enable = true;
 
