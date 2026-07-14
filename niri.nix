@@ -4,7 +4,7 @@
 {
   programs.niri = {
     enable = true;
-    # useNautilus = true;
+    useNautilus = true;
   };
 
   services.iio-niri.enable = true;
@@ -13,7 +13,6 @@
   services.tumbler.enable = true;
 
   environment.systemPackages = with pkgs; [
-    thunar
     fuzzel
 
     # # Bar
