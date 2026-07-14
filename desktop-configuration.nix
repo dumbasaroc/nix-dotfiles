@@ -11,11 +11,14 @@
     RUSTICL_ENABLE = "radeonsi";
     EDITOR = "nvim";
   };
-  hardware.graphics.enable = true;
-  hardware.graphics.enable32Bit = true;
-  hardware.graphics.extraPackages = with pkgs; [
-    mesa.opencl
-  ];
+
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+    extraPackages = with pkgs; [
+      mesa.opencl
+    ];
+  };
 
   nixpkgs.config.rocmSupport = true;
 

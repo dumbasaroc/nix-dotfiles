@@ -11,7 +11,7 @@ in {
   imports = [
     ./roc/cli.nix
     ./roc/design.nix
-    ./roc/kde6-settings-desktop.nix
+    # ./roc/kde6-settings-desktop.nix
     ./roc/nixvim.nix
     ./roc/noctalia.nix
     ./roc/security.nix

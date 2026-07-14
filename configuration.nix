@@ -7,7 +7,7 @@
 {
   imports = [
     ./fonts.nix
-    ./kde6.nix
+    # ./kde6.nix
     ./niri.nix
     ./security.nix
     ./system-packages.nix
