@@ -15,6 +15,9 @@
   environment.systemPackages = with pkgs; [
     fuzzel
 
+    # Cursor Theme
+    rose-pine-cursor
+
     # # Bar
     # inputs.roc-ags-shell.packages."x86_64-linux".default
     # swaynotificationcenter
