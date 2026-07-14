@@ -8,6 +8,8 @@ in {
 
   services.displayManager.sddm = {
     enable = true;
+    wayland.enable = true;
+
     extraPackages = with pkgs; [
       kdePackages.qtmultimedia # Apparently required for video/audio backgrounds
     ];

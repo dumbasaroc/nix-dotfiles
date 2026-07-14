@@ -10,6 +10,7 @@
     # ./kde6.nix
     ./niri.nix
     ./security.nix
+    ./sddm.nix
     ./system-packages.nix
     ./steam.nix
     ./vscode.nix
