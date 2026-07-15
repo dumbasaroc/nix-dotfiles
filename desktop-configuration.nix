@@ -10,6 +10,8 @@
   environment.variables = {
     RUSTICL_ENABLE = "radeonsi";
     EDITOR = "nvim";
+    XCURSOR_THEME = "BreezeX-RosePine-Linux";
+    XCURSOR_SIZE = 32;
   };
 
   hardware.graphics = {
