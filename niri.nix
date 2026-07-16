@@ -15,6 +15,9 @@
   environment.systemPackages = with pkgs; [
     fuzzel
 
+    # File Browser
+    nautilus
+
     # Cursor Theme
     rose-pine-cursor
 
