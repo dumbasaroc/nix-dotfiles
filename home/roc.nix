@@ -82,6 +82,8 @@ in {
 
         PATH="''$PATH:''$HOME/.scripts"
         alias mkenter="source mkenter"
+
+        fastfetch -l NixOS2
       '';
     };
 
