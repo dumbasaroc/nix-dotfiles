@@ -63,6 +63,11 @@ in {
           font_size             12.0
 
           shell_integration     enabled
+
+          hide_window_decorations      yes
+
+          background_opacity           0.7
+          background_blur              32
         '';
       };
     };
