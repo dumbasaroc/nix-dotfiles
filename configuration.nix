@@ -121,6 +121,7 @@
   environment.systemPackages = with pkgs; [
     wget
     git
+    vlc
     ntfs3g
     wineWow64Packages.stable
     winetricks
