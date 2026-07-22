@@ -122,6 +122,7 @@
     wget
     git
     vlc
+    blueman
     ntfs3g
     wineWow64Packages.stable
     winetricks
